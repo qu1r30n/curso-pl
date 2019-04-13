@@ -25,10 +25,16 @@ def  _print_bienvenido():
     print("*"*5)
     print("que deceas hacer?")
     print("[c]rear cliente")
+    print("[e]editar cliente")
     print("[b]orrar cliente")
 
-def edit_cliente():
-    
+def edit_cliente(nom_cliente,nom_editar):
+    global clients
+    if nom_cliente in clients:
+        clients=clients.replace(nom_cliente + ",", nom_editar + ",")
+        list_client()
+    else:
+        print("cliente no se encuentra")
 
 if __name__ == '__main__':
 
@@ -45,7 +51,8 @@ if __name__ == '__main__':
         pass
     elif comando=="e":
         nom_cliente=input("cual es el nom del cliente: ")
-        edit_cliente()
+        nom_editar=input("por cual lo vas a editar: ")
+        edit_cliente(nom_cliente,nom_editar)
     else:
         print("opcion invalida")
 
