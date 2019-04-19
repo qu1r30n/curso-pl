@@ -17,8 +17,8 @@ def _guardar_cliente_almacenamiento():
         escribir=csv.DictWriter(f, fieldnames=esquema_clientes)
         escribir.writerows(clients)
         os.remove(client_table)
+        f.close()
         os.rename(temp_nom_tab,client_table)
-
 
 def crear_cliente(diccionario_cliente): 
     global clients
