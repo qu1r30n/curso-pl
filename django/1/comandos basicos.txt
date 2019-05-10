@@ -1,6 +1,14 @@
+si no tienes instalado pip ve a la pagina https://bootstrap.pypa.io/get-pip.py copea el texto guardalo como get-pip.py
+y ejecutalo poniendo "python get-pip.py" sin comillas
+
+pip install virtualenv				//instalar paquete para poder hacer maquinas virtuales
+pip install flask				//instala paquete para crear un servidor
+pip freaze					//checa cuales paquetes has instalado
 virtualenv crea_app     			//maquina virtual //puedes modificar por otro nombre crea_app
-crea_app/scripts/activate			//activacion maquina virtual
 crea_app/scripts/deactivate			//desactivar maquina virtual
-pip install django -U   			//instalar django
-django-admin startproject applicacion . 	//crear aplicacion //puedes modificar el "." por un nombre de carpeta ya existente
-python manage.py runserver			//inicia servidor tomando encuenta el archivo manage.py que aparecio con el startproject
+crea_app/scripts/activate			//activacion maquina virtual
+
+esto--------------------------------------------------------- es un ejemplo para instalarlo desde un archivo de texto
+echo Flask==1.0.2 > requerimientos.txt		//crea acrhivo requeriments y le pone el texto Flask==1.0.2	
+pip install -r requerimientos.txt		//instala lo que este dentor del archivo requerimentos
+----------------------------
