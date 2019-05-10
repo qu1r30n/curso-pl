@@ -1,0 +1,7 @@
+virtualenv crea_app     			//maquina virtual //puedes modificar por otro nombre crea_app
+nom_maquina_virtual/scripts/activate		//activacion maquina virtual
+nom_maquina_virtual/scripts/deactivate		//desactivar maquina virtual
+pip install django -U   			//instalar django
+django-admin startproject applicacion . 	//crear aplicacion //puedes modificar el "." por un nombre de carpeta ya existente
+python manage.py runserver			//inicia servidor tomando encuenta el archivo manage.py que aparecio con el startproject
+python manage.py startapp posts			//crea app //puedes modificar por otro nombre posts
