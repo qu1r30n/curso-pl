@@ -1,0 +1,45 @@
+git config --global user.email "qu1r30n@hotmail.com"
+git config --global user.name "qu1r30n"
+
+git init primer_repo crea repocitorio
+
+git status
+
+git add index.html
+git add -A		 	//Agrega todos los archivos.
+
+git rm --cached index.html
+git rm -f index.css		//elimina del stagin y del directori el archivo
+
+git commit -m "inciando landing"
+git commit --amend -m "corrigiendo mensaje anterior y agregando el achivo que esta en el standing"
+
+git tag -a 0.5 -m "version estable del proyecto"
+git tag -l						//checa solo las versiones o tags y los ordena
+git tag 0.3 146709fc41bd66a6b481db27bd2387ff4aba1322	//etiquetado versiones anteriores
+git tag -d 0.3			//elimina tags
+git tag -f -a 0.1 -m "iniciando el proyecto" a3e65e03e2bd89e0ce8bc6582b4ff9eb630584f7	//iniciando el proyecto
+
+git log				//checa todos los commits con todo su sha1, los tag y mensaje
+git log --oneline		//checa todos los commits con su sha1 resumido, los tag y mensaje
+git log --oneline --graph	//checa todos los commits con su sha1 resumido, los tag y mensaje y las ramas de forma grafica
+git log -2			//checa los numero de commits empesando por el mas actual y llendo hacia el mas antiguo
+
+git diff a3e65e0		//checa las diferencias del commit señalado con el commit actual
+git diff a3e65e0 146709f	//checa las diferencias entre los commits señalados
+git diff 0.1 0.3		//checa las diferebcias entre los tags señalados
+
+git reset --soft 146709f	//elimina los archivos mas actuales despues de este y los deja listos para hacer commit
+git reset --mixed 146709f	//elimina los archivos mas actuales despues de este
+$ git reset --hard a3e65e0	//elimina los archivos mas actuales despues de este
+
+git reset HEAD footer.JPG	//los quita del standing
+
+git config --global core.editor "atom --wait"	//configura editor de texto que no sea "vim" sino sea "atom"
+
+
+git branch peticion	//crea una rama del repositorio llamado peticion
+git branch -l 			//listado de ramas
+git branch -d <nombre_rama>	//elimina rama
+git branch -D <nombre_rama>	//elimina rama sin importar que tenga commits adentro
+git branch -m <nombre de rama> <nombre_nueva_rana>
