@@ -43,3 +43,5 @@ git branch -l 			//listado de ramas
 git branch -d <nombre_rama>	//elimina rama
 git branch -D <nombre_rama>	//elimina rama sin importar que tenga commits adentro
 git branch -m <nombre de rama> <nombre_nueva_rana>
+
+git checkout [nombre/sha1]		//moverte entre ramas o commits
