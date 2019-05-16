@@ -45,3 +45,18 @@ git branch -D <nombre_rama>	//elimina rama sin importar que tenga commits adentr
 git branch -m <nombre de rama> <nombre_nueva_rana>
 
 git checkout [nombre/sha1]		//moverte entre ramas o commits
+git checkout -b [nombre_rama]		//Nos permite crear una nueva rama sin necesidad de usar branch
+git checkout -- index.html		//elimina cambios echos
+
+git merge hotfix			//mescla ramas
+
+git rebase updateA			//mescla sin hacer rama
+git rebase -i updateA			// abre la edicion con vim
+
+git stash	 			//es otro de los limbos, como el staging area. Para agregar los cambios estos deben estar en el staging area.
+git stash list				//nos muestra la lista de stash que tengamos.
+git stash drop stash@{numero} 		//nos permite borrar un stash.
+git stash apply		stash@{numero}	//aplicamos el último cambio
+
+
+git cherry-pick [SHA1] 			//nos permite cambiar un commit a otra rama para salvarnos la vida.
