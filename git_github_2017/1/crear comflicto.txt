@@ -1,0 +1,18 @@
+git init . 
+echo "1" > 1.txt
+git add 1.txt
+git commit -m "guardando 1"
+git checkout -b derecha
+git status
+echo "total mente diferente" > 1.txt
+git status
+git add 1.txt
+git commit -m "creado denuevo pero del lado derecho"
+git checkout master
+echo "contenido append" >> 1.txt
+git add 1.txt
+git commit -m "contenido append"
+git status
+git merge derecha
+git add 1.txt
+git commit -m "modificado todo"

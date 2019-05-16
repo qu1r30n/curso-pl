@@ -1,7 +1,7 @@
 git config --global user.email "qu1r30n@hotmail.com"
 git config --global user.name "qu1r30n"
 
-git init primer_repo crea repocitorio
+git init primer_repo 		//crea repocitorio
 
 git status
 
@@ -42,7 +42,7 @@ git branch peticion	//crea una rama del repositorio llamado peticion
 git branch -l 			//listado de ramas
 git branch -d <nombre_rama>	//elimina rama
 git branch -D <nombre_rama>	//elimina rama sin importar que tenga commits adentro
-git branch -m <nombre de rama> <nombre_nueva_rana>
+git branch -m <nombre de rama> <nombre_nueva_rana>	//para renombrar ramas
 
 git checkout [nombre/sha1]		//moverte entre ramas o commits
 git checkout -b [nombre_rama]		//Nos permite crear una nueva rama sin necesidad de usar branch
@@ -60,3 +60,46 @@ git stash apply		stash@{numero}	//aplicamos el último cambio
 
 
 git cherry-pick [SHA1] 			//nos permite cambiar un commit a otra rama para salvarnos la vida.
+
+github-----------------------------------------
+
+ssh-keygen -t rsa -b 4096 -C "email@email.com"  //crea llave ssh para no estarla pone y pone
+pbcopy < ~/.ssh/id_rsa.pub			//crea llave publica
+
+git remote add [origin] [SSH/HTTPS] 			//Conecta un repositorio con nuestro equipo local.
+git remote -v 						//Lista las conexiones existentes.
+git remote remove [origin] 				//Elimina una conexión con algún repositorio.
+---------------------------
+git fetch 		//descarga los cambios a una rama generalmente llamada origin/master, seguido de esto tienes que fuisonar esa rama
+
+$ git fetch origin master 
+// origin= remoto | master= rama del remoto
+// ahora tienes una rama llamada origin/master
+// que pueedes ver con 'git branch -a'
+
+$ git merge origin/master
+// si obtienes un error usar la siguiente linea
+// git merge origin/master --allow-unrelated-histories
+
+git merge origin/master master --allow-unrelated-histories (Vamos a mezclar la rama del repositorio remoto con la rama master del local)
+
+---------------------------------
+git pull 	//es como ejecutar los 2 pasos anteriores(fetch y merge) en uno solo
+
+$ git pull origin master
+--------------------------
+git merge origin/master
+
+“origin/master” es una rama, creada automaticamente al hacer fetch
+-----------------------------------
+Asi subimos nuestros cambios a github:
+git push origin master
+
+Tambien podemos enviar los tags:
+git push origin master --tags
+
+Podemos enviar otras ramas:
+git push origin [otra_rama]
+-------------------------------------------
+issue_template.md  		
+pull_request_template.md
