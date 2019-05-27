@@ -12,7 +12,7 @@
             {% for post in posts %}
             <div class="col-lg-4 offset-lg-4">
                 <div class="media">
-                    <img class="mr-3 rounded-circle"width="50" height="50" src="{{ post.usuario.imagen }}" alt="{{ post.usuario.nombre }}">
+                    <img class="mr-3 rounded-circle" src="{{ post.usuario.imagen }}" alt="{{ post.usuario.nombre }}">
                     <div class="media-body">
                         <h5 class="mt-0">{{ post.usuario.nombre }}</h5>
                         {{ post.hora }}

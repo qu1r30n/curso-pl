@@ -16,3 +16,9 @@ echo virtualenv==16.4.3> requerimientos.txt		//crea acrhivo requeriments y le po
 pip install -r requerimientos.txt			//instala lo que este dentor del archivo requerimentos
 
 --------------------------------------------------------------------------------------------------------------------
+
+python manage.py migrate			//migra las columnas a la base de datos
+python manage.py makemigrations			//checa las nuevas modificaciones a la tabla y las prepara para migrar
+
+python manage.py shell				//inicia la terminal tipo django para que puedas utilisar todas las librerias sin problemas
+python manage.py createsuperuser		//crear super usuario

@@ -1,0 +1,36 @@
+1from datetime import date
+
+users=[
+    {
+        "email":"qu1r30n@gmail.com",
+        "contraseña":"56789",
+        "apellido":"jamblet",
+        "nombre":"QUIREON",
+        "cumpleaños": date(1989,8,9),
+        "descripcion":"todo un jugador",
+        "es_administrador":True,
+    },
+]
+
+from posts.models import User
+
+for user in users:
+    obj= User(**user)
+    obj.save()
+    print(obj.pk)
+
+
+--------------------------------------------------
+from posts.models import User
+user= User.objects.get(email="qu1r30n@gmail.com")
+user
+user.nombre
+user.email
+
+platzi_users=User.objects.filter(email__endswith="@platzi.com")
+users = User.objects.all()
+
+for u in platzi_users:
+	print(u.email,":",u.is_admin)
+
+platzi_users=User.objects.filter(email__endswith="@platzi.com").update(es_administrador=True)
