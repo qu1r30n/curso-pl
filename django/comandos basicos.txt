@@ -6,7 +6,12 @@ virtualenv crea_app     			//maquina virtual //puedes modificar por otro nombre 
 nom_maquina_virtual/scripts/deactivate		//desactivar maquina virtual
 nom_maquina_virtual/scripts/activate		//activacion maquina virtual
 pip install django -U   			//instalar django
-django-admin startproject applicacion . 	//crear aplicacion //puedes modificar el "." por un nombre de carpeta ya existente
+django-admin startproject applicacion . 	//crear aplicacion //puedes modificar el "." por un nombre de carpeta ya existente y el "applicacion"  por el nombre del proyecto
+python manage.py startapp posts			//crea app para modelarla a tu conveniencia
+
+			// poner en el setting en el installed_app la el nombre carpeta de la app ejemplo "posts"
+			// poner el app en el app.py en la parte class PostsConfig(AppConfig):  ponerle verbose_name = "Posts"
+
 python manage.py runserver			//inicia servidor tomando encuenta el archivo manage.py que aparecio con el startproject
 python manage.py startapp posts			//crea app //puedes modificar por otro nombre posts
 
