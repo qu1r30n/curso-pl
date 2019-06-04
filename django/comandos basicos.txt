@@ -27,3 +27,4 @@ python manage.py makemigrations			//checa las nuevas modificaciones a la tabla y
 
 python manage.py shell				//inicia la terminal tipo django para que puedas utilisar todas las librerias sin problemas
 python manage.py createsuperuser		//crear super usuario
+15
